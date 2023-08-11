@@ -1,0 +1,46 @@
+<div class="container mt-2">
+    <div>
+            <h1 class="text-center mb-3">
+               
+           Add Student
+            </h1>
+    </div>
+    
+        <div class="container">
+            <form [formGroup]="addStudent" novalidate class="border p-3 form" >
+                    <!-- id -->
+                    <div class="mb-2">
+                        <input formControlName="no"  placeholder="No:" type="text" class="form-control" required>
+                    </div>
+     
+                
+                    <!-- name -->
+                    <div class="mb-2">
+                        <input formControlName="name"   placeholder="Sudent Name" type="text" class="form-control" required>
+                    </div>
+                    
+                   
+                    <!-- Mobile -->
+                    <div class="mb-2">      
+                        <input formControlName="mark"   placeholder="Student Mark" type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-2">
+                        <input (click)="onSubmit()"  type="button" class="btn btn-primary" value="Add Student">
+                        <a routerLink="" class="btn btn-warning ms-5">Close</a>
+                            </div>
+                  
+                    <div class="mb-2">
+                
+                
+                    </div>
+                
+                
+                </form>
+      
+                </div>
+               
+        
+                
+           
+    </div>
+    

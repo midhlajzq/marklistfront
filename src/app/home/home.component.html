@@ -1,0 +1,39 @@
+<div class="container">
+    <div><h1 class="text-center text-primary">Mark-list</h1></div>
+</div>
+<div class="container-fluid">
+    <a routerLink="add-student" class="btn btn-dark ms-5">Add Student</a>
+
+    <table class="table table-bodered table text-center text-dark p-5 mt-5">
+        <thead>
+            <tr>
+                <th>NO:</th>
+                <th>Name</th>
+                <th>Mark</th>
+                <th></th>
+               
+            </tr>
+        </thead>
+        <tbody  >
+            <!-- <tr  *ngFor="let contact of allContacts"> -->
+                <tr *ngFor="let student of allstudents ">
+                   <td>{{student.no}}</td>
+                   <td>{{student.name}}</td>
+                   <td>{{student.mark}}</td>
+                   <td><div class="col-md-1 d-flex flex-raw justify-content-ceneter align-items-center">
+                    <!-- view -->
+                    <a class="btn btn-success me-1" routerLink="view-student/{{student._id}}" >
+                        <i class="fa-solid fa-eye"></i>
+                    </a>
+                    <a class="btn btn-warning me-1" routerLink="edit-student/{{student._id}}">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                 <button (click)="deleteContact(student._id)" class="btn btn-danger">
+                    <i class="fa-solid fa-trash"></i>
+                 </button>
+                </div></td>
+                
+            </tr>
+           </tbody>
+    </table>
+</div>
